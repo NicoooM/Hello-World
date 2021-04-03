@@ -6,72 +6,8 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-
-$blanc: #fefaec;
-$noir: #2d2c2a;
-$jaune: #f2bb16;
-$orange-c: #f27f1b;
-$orange-f: #f26b1d;
-$title: "Shippori Mincho", serif;
-$para: "Roboto", sans-serif;
-
-h1 {
-  font-family: $title;
-  font-weight: bold;
-  font-size: 32px;
-}
-
-h2 {
-  font-family: $title;
-  font-size: 24px;
-}
-
-p {
-  font-family: $para;
-  font-size: 16px;
-}
-
-ul {
-  list-style: none;
-}
-
-.circle {
-  border-radius: 50%;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.absolute-center {
-  top: 50%;
-  left: 50%;
-  transform: translateY(-50%) translateX(-50%);
-}
-
-.m-auto {
-  margin: auto;
-}
-
-.flex {
-  display: flex;
-}
-
-.grid {
-  display: grid;
-}
-
-.aic {
-  align-items: center;
-}
-
-.around {
-  justify-content: space-around;
-}
-
-.text-center {
-  text-align: center;
-}
+@import "variables";
+@import "classes";
 
 .landing {
   background-color: $jaune;
@@ -83,13 +19,23 @@ ul {
   }
   ul {
     grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    margin: 13px 0;
     div {
-      background-color: $orange-c;
-      height: 60px;
-      width: 60px;
+      background-color: rgba(242, 127, 27, 0.5);
+      height: 65px;
+      width: 65px;
     }
     p {
       font-size: 12px;
+    }
+  }
+  .travel {
+    background-color: $orange-f;
+    height: 90px;
+    width: 90px;
+    a {
+      color: $blanc;
     }
   }
 }
