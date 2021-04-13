@@ -9,14 +9,44 @@
 @import "variables";
 @import "classes";
 
+@keyframes open-landing {
+  from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+  }
+  to {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(1);
+  }
+}
+
+@keyframes close-landing {
+  from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(1);
+  }
+  to {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+  }
+}
+
 .landing {
   background-color: $jaune;
   height: 65vh;
   width: 65vh;
   padding: 50px 90px;
-  animation: transform 0.4s ease-in-out;
+  animation: open-landing 0.5s forwards;
   &.closed {
-    transform: scale(0);
+    animation: close-landing 0.5s forwards;
   }
   p:first-of-type {
     margin: 15px 0;
