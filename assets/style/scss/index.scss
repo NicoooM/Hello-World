@@ -39,6 +39,32 @@
   }
 }
 
+body {
+  background-color: $noir;
+}
+
+svg {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  .cls-1 {
+    font-size: 15px;
+    fill: #f2bb18;
+    font-family: Roboto-Bold, Roboto;
+    font-weight: 700;
+  }
+  .cls-2 {
+    letter-spacing: -0.03em;
+  }
+  .cls-3 {
+    font-size: 9px;
+    fill: $blanc;
+    font-family: ShipporiMinchoB1-Regular, Shippori Mincho B1;
+  }
+}
+
 .landing {
   background-color: $jaune;
   height: 65vh;
