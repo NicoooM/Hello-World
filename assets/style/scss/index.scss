@@ -109,6 +109,9 @@ header {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  &.closed {
+    left: -125px;
+  }
   .icons-container {
     background-color: $blanc;
     height: 70vh;
@@ -146,6 +149,17 @@ header {
         font-size: 16px;
         cursor: pointer;
       }
+    }
+  }
+  .extend-side-bar {
+    cursor: pointer;
+    background-color: $blanc;
+    justify-self: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 0 25px 25px 0;
+    img {
+      transform: translate(-50%, -50%) rotateY(180deg);
     }
   }
 }

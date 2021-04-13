@@ -1,6 +1,9 @@
 const travel = document.querySelector("#travel");
 const landing = document.querySelector(".landing");
 const logo = document.querySelector("#logo");
+const extendSideBarBtn = document.querySelector(".extend-side-bar");
+const sideBar = document.querySelector(".side-bar");
+const triangleSideBar = document.querySelector(".triangle");
 
 // Fermer / Ouvrir landing
 travel.addEventListener("click", () => {
@@ -10,5 +13,16 @@ travel.addEventListener("click", () => {
     logo.addEventListener("click", () => {
       landing.classList.remove("closed");
     });
+  }
+});
+
+// Fermer / Ouvrir side bar
+extendSideBarBtn.addEventListener("click", () => {
+  sideBar.classList.toggle("closed");
+  if (sideBar.classList.contains("closed")) {
+    triangleSideBar.style.transform = "translate(-50%, -50%) rotateY(180deg)";
+  }
+  if (sideBar.classList.contains("closed") === false) {
+    triangleSideBar.style.transform = "translate(-50%, -50%) rotateY(0deg)";
   }
 });
