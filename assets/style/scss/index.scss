@@ -39,6 +39,23 @@
   }
 }
 
+@keyframes open-side-bar {
+  from {
+    left: 0;
+  }
+  to {
+    left: -125px;
+  }
+}
+@keyframes close-side-bar {
+  from {
+    left: -125px;
+  }
+  to {
+    left: 0;
+  }
+}
+
 body {
   background-color: $noir;
 }
@@ -106,11 +123,11 @@ header {
 }
 
 .side-bar {
-  left: 0;
   top: 50%;
   transform: translateY(-50%);
+  animation: close-side-bar 0.5s forwards;
   &.closed {
-    left: -125px;
+    animation: open-side-bar 0.5s forwards;
   }
   .icons-container {
     background-color: $blanc;
