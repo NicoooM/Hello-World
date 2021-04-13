@@ -43,25 +43,27 @@ body {
   background-color: $noir;
 }
 
-svg {
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-  .cls-1 {
-    font-size: 15px;
-    fill: #f2bb18;
-    font-family: Roboto-Bold, Roboto;
-    font-weight: 700;
-  }
-  .cls-2 {
-    letter-spacing: -0.03em;
-  }
-  .cls-3 {
-    font-size: 9px;
-    fill: $blanc;
-    font-family: ShipporiMinchoB1-Regular, Shippori Mincho B1;
+header {
+  svg {
+    margin-left: 15px;
+    margin-top: 15px;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    .cls-1 {
+      font-size: 15px;
+      fill: #f2bb18;
+      font-family: Roboto-Bold, Roboto;
+      font-weight: 700;
+    }
+    .cls-2 {
+      letter-spacing: -0.03em;
+    }
+    .cls-3 {
+      font-size: 9px;
+      fill: $blanc;
+      font-family: ShipporiMinchoB1-Regular, Shippori Mincho B1;
+    }
   }
 }
 
@@ -100,5 +102,50 @@ svg {
     color: $blanc;
     font-size: 18px;
     cursor: pointer;
+  }
+}
+
+.side-bar {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  .icons-container {
+    background-color: $blanc;
+    height: 70vh;
+    width: 125px;
+    border-radius: 0 70px 70px 0;
+    ul {
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 50%;
+      li {
+        background-color: $orange-f;
+        height: 50px;
+        width: 50px;
+        svg {
+          height: 25px;
+          width: 25px;
+          fill: $blanc;
+        }
+      }
+    }
+    .side-bar-buttons {
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 100%;
+      height: 50%;
+      button {
+        background-color: $orange-f;
+        font-family: $title;
+        font-weight: bold;
+        border: none;
+        height: 70px;
+        width: 70px;
+        color: $blanc;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    }
   }
 }

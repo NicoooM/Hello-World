@@ -2,6 +2,7 @@ const travel = document.querySelector("#travel");
 const landing = document.querySelector(".landing");
 const logo = document.querySelector("#logo");
 
+// Fermer / Ouvrir landing
 travel.addEventListener("click", () => {
   landing.classList.add("closed");
   console.log("clicked");
