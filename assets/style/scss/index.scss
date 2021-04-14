@@ -60,6 +60,7 @@ body {
   background-color: $noir;
 }
 
+// Header
 header {
   svg {
     margin-left: 15px;
@@ -83,7 +84,9 @@ header {
     }
   }
 }
+// fin header
 
+// landing
 .landing {
   background-color: $jaune;
   height: 65vh;
@@ -113,15 +116,15 @@ header {
     background-color: $orange-f;
     font-family: $title;
     font-weight: bold;
-    border: none;
     height: 90px;
     width: 90px;
     color: $blanc;
     font-size: 18px;
-    cursor: pointer;
   }
 }
+// fin landing
 
+// side bar
 .side-bar {
   top: 50%;
   transform: translateY(-50%);
@@ -159,12 +162,10 @@ header {
         background-color: $orange-f;
         font-family: $title;
         font-weight: bold;
-        border: none;
         height: 70px;
         width: 70px;
         color: $blanc;
         font-size: 16px;
-        cursor: pointer;
       }
     }
   }
@@ -178,5 +179,19 @@ header {
     img {
       transform: translate(-50%, -50%) rotateY(180deg);
     }
+  }
+}
+// fin side bar
+
+// about
+.about {
+  flex-direction: column;
+  height: 70vh;
+  top: 50%;
+  transform: translateY(-50%);
+  button {
+    background-color: $orange-f;
+    width: 50px;
+    height: 50px;
   }
 }
