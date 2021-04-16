@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/style/css/index.css" />
-    <title>Hello World!</title>
+    <title>Hello World !</title>
   </head>
   <body>
     <!-- Logo -->
@@ -381,6 +381,47 @@
         </div>
       </section>
       <!-- Fin About -->
+
+      <!-- Début Contact -->
+      <section class="contact absolute">
+        <button class="circle absolute">
+          <div class="cross-bar cross-bar-1 absolute"></div>
+          <div class="cross-bar cross-bar-2 absolute"></div>
+        </button>
+        <div class="contact-text flex">
+          <h2>I want to express myself.<br />Say hello to entire world !</h2>
+          <form action="">
+            <div class="form-part-1">
+              <label for="full-name">Full name</label>
+              <input type="text" name="full-name" />
+              <label for="email">Email</label>
+              <input type="email" name="email" />
+            </div>
+            <h3>Here is my idea...</h3>
+            <label for="country">Country</label>
+            <input type="text" name="country" />
+            <label for="category">Category</label>
+            <select name="category" id="">
+              <option value="">Category</option>
+              <option value="dog">Dog</option>
+              <option value="cat">Cat</option>
+              <option value="hamster">Hamster</option>
+              <option value="parrot">Parrot</option>
+              <option value="spider">Spider</option>
+              <option value="goldfish">Goldfish</option>
+            </select>
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              cols="33"
+            ></textarea>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </section>
+      <!-- Fin Contact -->
     </main>
 
     <script src="./assets/scripts/app.js"></script>

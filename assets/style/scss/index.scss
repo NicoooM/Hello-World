@@ -213,30 +213,31 @@ header {
   &.closed {
     animation: open-about 0.5s forwards;
   }
-  button {
-    background-color: $orange-f;
-    width: 70px;
-    height: 70px;
-    top: 30px;
-    right: 30px;
-    .cross-bar {
-      top: 50%;
-      left: 50%;
-      height: 20px;
-      width: 4px;
-      background-color: $blanc;
-      &.cross-bar-1 {
-        transform: translate(-50%, -50%) rotate(45deg);
-      }
-      &.cross-bar-2 {
-        transform: translate(-50%, -50%) rotate(-45deg);
-      }
-    }
-  }
   .about-text {
     flex-direction: column;
     width: 100%;
     height: 100%;
-    padding: 10% 20% 10% 10%;
+    padding: 50px 100px 50px 50px;
   }
 }
+// fin about
+
+// début contact
+.contact {
+  background-color: $blanc;
+  border-radius: 0 50px 50px 0;
+  height: 70vh;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 90%;
+  .contact-text {
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+    padding: 50px 100px 50px 50px;
+    .form-part-1 {
+      margin-top: 30px;
+    }
+  }
+}
+// fin contact

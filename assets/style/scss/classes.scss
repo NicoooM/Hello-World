@@ -32,6 +32,24 @@ a {
 button {
   border: none;
   cursor: pointer;
+  background-color: $orange-f;
+  width: 70px;
+  height: 70px;
+  top: 30px;
+  right: 30px;
+  .cross-bar {
+    top: 50%;
+    left: 50%;
+    height: 20px;
+    width: 4px;
+    background-color: $blanc;
+    &.cross-bar-1 {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &.cross-bar-2 {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }
 
 .circle {
