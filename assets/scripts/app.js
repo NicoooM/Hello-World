@@ -10,6 +10,10 @@ const extendAboutBtn = document.querySelector(".extend-about");
 const about = document.querySelector(".about");
 const closeAboutBtn = document.querySelector(".close-about");
 
+const extendContactBtn = document.querySelector(".extend-contact");
+const contact = document.querySelector(".contact");
+const closeContactBtn = document.querySelector(".close-contact");
+
 // Fermer / Ouvrir landing
 travel.addEventListener("click", () => {
   landing.classList.add("closed");
@@ -38,4 +42,12 @@ extendAboutBtn.addEventListener("click", () => {
 });
 closeAboutBtn.addEventListener("click", () => {
   about.classList.toggle("closed");
+});
+
+// Fermer / Ouvrir contact
+extendContactBtn.addEventListener("click", () => {
+  contact.classList.toggle("closed");
+});
+closeContactBtn.addEventListener("click", () => {
+  contact.classList.toggle("closed");
 });

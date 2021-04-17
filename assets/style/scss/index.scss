@@ -1,81 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "variables";
 @import "classes";
-
-@keyframes open-landing {
-  from {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%) scale(0);
-  }
-  to {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%) scale(1);
-  }
-}
-
-@keyframes close-landing {
-  from {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%) scale(1);
-  }
-  to {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%) scale(0);
-  }
-}
-
-@keyframes open-side-bar {
-  from {
-    left: 0;
-  }
-  to {
-    left: -125px;
-  }
-}
-@keyframes close-side-bar {
-  from {
-    left: -125px;
-  }
-  to {
-    left: 0;
-  }
-}
-
-@keyframes open-about {
-  from {
-    left: 0;
-  }
-  to {
-    left: -50%;
-  }
-}
-@keyframes close-about {
-  from {
-    left: -50%;
-  }
-  to {
-    left: 0;
-  }
-}
-
-body {
-  background-color: $noir;
-}
+@import "keyframes";
 
 // Header
 header {
@@ -230,13 +157,20 @@ header {
   transform: translateY(-50%);
   top: 50%;
   width: 90%;
+  animation: close-contact 0.5s forwards;
+  &.closed {
+    animation: open-contact 0.5s forwards;
+  }
   .contact-text {
     flex-direction: column;
     width: 65%;
     height: 100%;
     padding: 50px 100px 50px 50px;
-    .form-part-1 {
+    .form-part {
       margin-top: 30px;
+    }
+    h3 {
+      margin: 10% 0 5% 0;
     }
   }
 }

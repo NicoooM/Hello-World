@@ -1,0 +1,88 @@
+// Landing
+@keyframes open-landing {
+  from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+  }
+  to {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(1);
+  }
+}
+
+@keyframes close-landing {
+  from {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(1);
+  }
+  to {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%) scale(0);
+  }
+}
+// Fin landing
+
+// Side bar
+@keyframes open-side-bar {
+  from {
+    left: 0;
+  }
+  to {
+    left: -125px;
+  }
+}
+@keyframes close-side-bar {
+  from {
+    left: -125px;
+  }
+  to {
+    left: 0;
+  }
+}
+// Fin side bar
+
+// About
+@keyframes open-about {
+  from {
+    left: 0;
+  }
+  to {
+    left: -50%;
+  }
+}
+@keyframes close-about {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+// Fin about
+
+// Contact
+@keyframes open-contact {
+  from {
+    left: 0;
+  }
+  to {
+    left: -90%;
+  }
+}
+@keyframes close-contact {
+  from {
+    left: -90%;
+  }
+  to {
+    left: 0;
+  }
+}
+// Fin contact

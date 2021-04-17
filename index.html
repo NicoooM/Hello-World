@@ -340,7 +340,7 @@
             </li>
           </ul>
           <div class="side-bar-buttons flex items-center">
-            <button class="circle">Contact</button>
+            <button class="circle extend-contact">Contact</button>
             <button class="circle extend-about">About</button>
           </div>
         </div>
@@ -383,34 +383,43 @@
       <!-- Fin About -->
 
       <!-- Début Contact -->
-      <section class="contact absolute">
-        <button class="circle absolute">
+      <section class="contact absolute closed">
+        <button class="circle absolute close-contact">
           <div class="cross-bar cross-bar-1 absolute"></div>
           <div class="cross-bar cross-bar-2 absolute"></div>
         </button>
         <div class="contact-text flex">
           <h2>I want to express myself.<br />Say hello to entire world !</h2>
           <form action="">
-            <div class="form-part-1">
-              <label for="full-name">Full name</label>
-              <input type="text" name="full-name" />
-              <label for="email">Email</label>
-              <input type="email" name="email" />
+            <div class="form-part flex between">
+              <div>
+                <label for="full-name" class="block">Full name</label>
+                <input type="text" name="full-name" />
+              </div>
+              <div>
+                <label for="email" class="block">Email</label>
+                <input type="email" name="email" />
+              </div>
             </div>
             <h3>Here is my idea...</h3>
-            <label for="country">Country</label>
-            <input type="text" name="country" />
-            <label for="category">Category</label>
-            <select name="category" id="">
-              <option value="">Category</option>
-              <option value="dog">Dog</option>
-              <option value="cat">Cat</option>
-              <option value="hamster">Hamster</option>
-              <option value="parrot">Parrot</option>
-              <option value="spider">Spider</option>
-              <option value="goldfish">Goldfish</option>
-            </select>
-            <label for="description">Description</label>
+            <div class="flex between">
+              <div>
+                <label for="country" class="block">Country</label>
+                <input type="text" name="country" />
+              </div>
+              <div>
+                <select name="category" id="">
+                  <option value="">Category</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="hamster">Hamster</option>
+                  <option value="parrot">Parrot</option>
+                  <option value="spider">Spider</option>
+                  <option value="goldfish">Goldfish</option>
+                </select>
+              </div>
+            </div>
+            <label for="description" class="block">Description</label>
             <textarea
               id="description"
               name="description"
