@@ -167,11 +167,91 @@ header {
     height: 100%;
     padding: 50px 100px 50px 50px;
     .form-part {
-      margin-top: 30px;
+      margin-top: 60px;
     }
     h3 {
       margin: 10% 0 5% 0;
     }
+    h2{
+      font-size: 32px;
+    }
   }
+  .input-field {
+    position: relative;
+    width: 40%
+  }
+
+  .input-field input[type="text"],
+  .input-field input[type="email"]  {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: $para;
+  }
+
+  .input-field label {
+    pointer-events: none;
+    font-size: 16px;
+    font-family: $para;
+    filter: opacity(50%);
+    display: block;
+    transition: 0.5s;
+  }
+
+  .input-field input[type="text"]:focus + label,
+  .input-field input[type="text"]:valid + label,
+  .input-field input[type="email"]:focus + label,
+  .input-field input[type="email"]:valid + label {
+    transform: translateY(-25px);
+    filter: opacity(100%);
+  }
+  
+  .input-field span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    background: #000;
+    filter: opacity(50%);
+    width: 100%;
+    height: 1px;
+  }
+
+  .description-field {
+    margin-top: 26px;
+    position: relative;
+    width: 60%
+  }
+
+  .description-field textarea  {
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    box-shadow: none;
+    font-size: 16px;
+    font-family: $para;
+  }
+
+  .description-field label {
+    pointer-events: none;
+    font-size: 16px;
+    font-family: $para;
+    filter: opacity(50%);
+    display: block;
+    transition: 0.5s;
+  }
+
+  .description-field textarea:focus + label {
+    transform: translateY(-25px);
+    filter: opacity(100%);
+  }
+
 }
+
 // fin contact

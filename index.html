@@ -392,21 +392,24 @@
           <h2>I want to express myself.<br />Say hello to entire world !</h2>
           <form action="">
             <div class="form-part flex between">
-              <div>
-                <label for="full-name" class="block">Full name</label>
-                <input type="text" name="full-name" />
+              <div class="input-field">
+                <input type="text" name="full-name" required=""/>
+                <label for="full-name">Full name</label>
+                <span></span>
               </div>
-              <div>
-                <label for="email" class="block">Email</label>
-                <input type="email" name="email" />
+              <div class="input-field">
+                <input type="email" name="email" required=""/>
+                <label for="email">E-mail</label>
+                <span></span>
               </div>
             </div>
             <h3>Here is my idea...</h3>
             <div class="flex between">
-              <div>
-                <label for="country" class="block">Country</label>
-                <input type="text" name="country" />
-              </div>
+              <div class="input-field">
+                <input type="text" name="country" required=""/>
+                <label for="country">Country</label>
+                <span></span>
+              </div>  
               <div>
                 <select name="category" id="">
                   <option value="">Category</option>
@@ -419,14 +422,14 @@
                 </select>
               </div>
             </div>
-            <label for="description" class="block">Description</label>
-            <textarea
-              id="description"
-              name="description"
-              rows="5"
-              cols="33"
-            ></textarea>
-            <input type="submit" value="Submit" />
+            <div class="description-field">
+              <label for="description" class="block">Description</label>
+              <textarea
+                id="description"
+                name="description"
+              ></textarea>
+              <input type="submit" value="Submit" />
+            </div>
           </form>
         </div>
       </section>
