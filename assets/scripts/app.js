@@ -17,7 +17,6 @@ const closeContactBtn = document.querySelector(".close-contact");
 // Fermer / Ouvrir landing
 travel.addEventListener("click", () => {
   landing.classList.add("closed");
-  console.log("clicked");
   if (landing.classList.contains("closed")) {
     logo.addEventListener("click", () => {
       landing.classList.remove("closed");
@@ -117,16 +116,22 @@ function init() {
 
   // lights
 
-  const dirLight1 = new THREE.DirectionalLight(0xffffff);
-  dirLight1.position.set(1, 1, 1);
-  scene.add(dirLight1);
+  // const dirLight1 = new THREE.DirectionalLight(0xffffff);
+  // dirLight1.position.set(1, 1, 1);
+  // scene.add(dirLight1);
 
-  const dirLight2 = new THREE.DirectionalLight(0x002288);
-  dirLight2.position.set(-1, -1, -1);
-  scene.add(dirLight2);
+  // const dirLight2 = new THREE.DirectionalLight(0x002288);
+  // dirLight2.position.set(-1, -1, -1);
+  // scene.add(dirLight2);
 
-  const ambientLight = new THREE.AmbientLight(0x222222);
-  scene.add(ambientLight);
+  // const dirLight3 = new THREE.DirectionalLight(0x002288);
+  // dirLight3.position.set(-10, -10, -10);
+  // dirLight3.target = sphere;
+  // scene.add(dirLight3);
+
+  const ambientLight1 = new THREE.AmbientLight(0xffffff);
+  // ambientLight1.position.set(10, 10, 10);
+  scene.add(ambientLight1);
 
   // renderer
 
@@ -135,8 +140,8 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight);
   document.body.appendChild(renderer.domElement);
 
-  stats = new Stats();
-  document.body.appendChild(stats.dom);
+  // stats = new Stats();
+  // document.body.appendChild(stats.dom);
 
   //
 
@@ -160,9 +165,9 @@ function init() {
 function createControls(camera) {
   controls = new TrackballControls(camera, renderer.domElement);
 
-  controls.rotateSpeed = 8.0;
+  controls.rotateSpeed = 3.0;
   controls.zoomSpeed = 1.2;
-  controls.panSpeed = 0.8;
+  // controls.panSpeed = 0.8;
 
   controls.keys = ["KeyA", "KeyS", "KeyD"];
 }
@@ -189,7 +194,7 @@ function animate() {
 
   controls.update();
 
-  stats.update();
+  // stats.update();
 
   render();
 }
