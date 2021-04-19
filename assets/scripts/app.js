@@ -103,7 +103,7 @@ function init() {
   // const textureLoader = new THREE.TextureLoader();
   // planetTexture = textureLoader.load("./cartedumonde.png");
   planetTexture = new THREE.TextureLoader().load("assets/img/cartedumonde.png");
-  // planetTexture.rotation(40);
+
   const geometry = new THREE.SphereGeometry(5, 64, 64);
   const material = new THREE.MeshPhongMaterial({
     color: 0xffffff,
@@ -114,16 +114,6 @@ function init() {
   sphere.material.shading = THREE.SmoothShading;
 
   scene.add(sphere);
-
-  // for (let i = 0; i < 500; i++) {
-  //   const mesh = new THREE.Mesh(geometry, material);
-  //   mesh.position.x = (Math.random() - 0.5) * 1000;
-  //   mesh.position.y = (Math.random() - 0.5) * 1000;
-  //   mesh.position.z = (Math.random() - 0.5) * 1000;
-  //   mesh.updateMatrix();
-  //   mesh.matrixAutoUpdate = false;
-  //   scene.add(mesh);
-  // }
 
   // lights
 
