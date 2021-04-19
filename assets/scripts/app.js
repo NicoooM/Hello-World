@@ -83,15 +83,15 @@ function init() {
   perspectiveCamera = new THREE.PerspectiveCamera(60, aspect, 1, 1000);
   perspectiveCamera.position.z = 15;
 
-  orthographicCamera = new THREE.OrthographicCamera(
-    (frustumSize * aspect) / -2,
-    (frustumSize * aspect) / 2,
-    frustumSize / 2,
-    frustumSize / -2,
-    1,
-    1000
-  );
-  orthographicCamera.position.z = 15;
+  // orthographicCamera = new THREE.OrthographicCamera(
+  //   (frustumSize * aspect) / -2,
+  //   (frustumSize * aspect) / 2,
+  //   frustumSize / 2,
+  //   frustumSize / -2,
+  //   1,
+  //   1000
+  // );
+  // orthographicCamera.position.z = 15;
 
   // world
 
@@ -145,15 +145,15 @@ function init() {
 
   //
 
-  const gui = new GUI();
-  gui
-    .add(params, "orthographicCamera")
-    .name("use orthographic")
-    .onChange(function (value) {
-      controls.dispose();
+  // const gui = new GUI();
+  // gui
+  //   .add(params, "orthographicCamera")
+  //   .name("use orthographic")
+  //   .onChange(function (value) {
+  //     controls.dispose();
 
-      createControls(value ? orthographicCamera : perspectiveCamera);
-    });
+  //     createControls(value ? orthographicCamera : perspectiveCamera);
+  //   });
 
   //
 
@@ -178,11 +178,11 @@ function onWindowResize() {
   perspectiveCamera.aspect = aspect;
   perspectiveCamera.updateProjectionMatrix();
 
-  orthographicCamera.left = (-frustumSize * aspect) / 2;
-  orthographicCamera.right = (frustumSize * aspect) / 2;
-  orthographicCamera.top = frustumSize / 2;
-  orthographicCamera.bottom = -frustumSize / 2;
-  orthographicCamera.updateProjectionMatrix();
+  // orthographicCamera.left = (-frustumSize * aspect) / 2;
+  // orthographicCamera.right = (frustumSize * aspect) / 2;
+  // orthographicCamera.top = frustumSize / 2;
+  // orthographicCamera.bottom = -frustumSize / 2;
+  // orthographicCamera.updateProjectionMatrix();
 
   renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -200,7 +200,7 @@ function animate() {
 }
 
 function render() {
-  const camera = params.orthographicCamera
+  const camera = params.perspectiveCamera
     ? orthographicCamera
     : perspectiveCamera;
 
