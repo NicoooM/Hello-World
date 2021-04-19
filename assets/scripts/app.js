@@ -55,8 +55,8 @@ closeContactBtn.addEventListener("click", () => {
 
 import * as THREE from "https://unpkg.com/three@0.127/build/three.module.js";
 
-import Stats from "https://unpkg.com/three@0.127/examples/jsm/libs/stats.module.js";
-import { GUI } from "https://unpkg.com/three@0.127/examples/jsm/libs/dat.gui.module.js";
+// import Stats from "https://unpkg.com/three@0.127/examples/jsm/libs/stats.module.js";
+// import { GUI } from "https://unpkg.com/three@0.127/examples/jsm/libs/dat.gui.module.js";
 
 import { TrackballControls } from "https://unpkg.com/three@0.127/examples/jsm/controls/TrackballControls.js";
 
@@ -72,7 +72,7 @@ const params = {
   orthographicCamera: false,
 };
 
-const frustumSize = 400;
+// const frustumSize = 400;
 
 init();
 animate();
